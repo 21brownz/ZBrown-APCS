@@ -2,7 +2,15 @@ package Unit1;
 
 import java.util.Scanner;
 
+/**
+ * The type Holy grail.
+ */
 public class HolyGrail {
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
             System.out.println("* A chat with a bridge keeper *");
