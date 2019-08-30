@@ -56,16 +56,21 @@ public class SimpleIOMath {
      * Print user's info
      */
     public void printInfo() {
-        int[] prime = new int[0];
         System.out.println("your name is: " + name);
         System.out.println("your age is: " + age);
         int nextbirthday = age+1;
         System.out.println("at your next birthday, you will turn: " + nextbirthday);
         System.out.println("The first prime factor of " + age + " is: ");
+        for(int i = 2; i < age; i++) {
+            int count = 0;
+            while(age%i == 0){
+
+           }
+        }
     }
 
     /**
-     * begin, sing.
+     * begin sing.
      */
     public void sing() {
         System.out.println("I'm gonna teach you how to sing it out");
