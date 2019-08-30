@@ -1,22 +1,19 @@
-/**
- * @author 21brownz
- * @version WED 9/4/2019
- * HolyGrail is a simple I/O application
- *
- */
 
 package Unit1;
 
 import java.util.Scanner;
 
 /**
- * The type Holy grail.
+ @author 21brownz
+  * @version WED 9/4/2019
+ * HolyGrail is a simple I/O application
+ *
  */
 public class HolyGrail {
     /**
      * The entry point of application.
-     *
-     * @param args the input arguments
+     * Main method for public class HolyGrail
+     * @param args command line arguments
      */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
