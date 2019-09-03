@@ -4,16 +4,15 @@ package Unit1;
 import java.util.Scanner;
 
 /**
- @author 21brownz
-  * @version WED 9/4/2019
- * HolyGrail is a simple I/O application
- *
+ * A simple IO application for a bad monty python reference
+ * @author 21brownz
+ * @version TUE 9/3/19
  */
 public class HolyGrail {
     /**
      * The entry point of application.
-     * Main method for public class HolyGrail
-     * @param args command line arguments
+     *
+     * @param args the input arguments
      */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
