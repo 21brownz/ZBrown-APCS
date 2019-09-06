@@ -31,7 +31,6 @@ public class SimpleIOMath {
     public static void main(String[] args) {
         SimpleIOMath simpleIOMath = new SimpleIOMath();
         simpleIOMath.promptUser();
-        simpleIOMath.sing();
         simpleIOMath.printInfo();
 
     }
@@ -49,34 +48,24 @@ public class SimpleIOMath {
         age = Integer.parseInt(scan.nextLine());
         System.out.println("What is your favorite number?");
         fnumber = Integer.parseInt(scan.nextLine());
-
     }
 
     /**
      * Print user's info
      */
     public void printInfo() {
-        System.out.println("your name is: " + name);
-        System.out.println("your age is: " + age);
-        int nextbirthday = age+1;
-        System.out.println("at your next birthday, you will turn: " + nextbirthday);
-        System.out.println("The first prime factor of " + age + " is: ");
-        for(int i = 2; i < age; i++) {
-            int count = 0;
-            while(age%i == 0){
-
-           }
-        }
-    }
-
-    /**
-     * begin sing.
-     */
-    public void sing() {
         System.out.println("I'm gonna teach you how to sing it out");
         System.out.println("Come on, come on, come on");
         System.out.println("Let me tell you what it's all about");
         System.out.println("Reading, writing, arithmetic");
         System.out.println("Are the branches of the learning tree");
+        System.out.println("your name is: " + name);
+        System.out.println("your age is: " + age);
+        int nextbirthday = age + 1;
+        System.out.println("at your next birthday, you will turn: " + nextbirthday);
+        System.out.println("The first prime factor of " + age + " is: ");
+            for(int i = 2; i < age; i++) {
+
+            }
     }
 }
