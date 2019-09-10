@@ -3,7 +3,6 @@
 @description: A simple program to sing School Days but nerdier
 */
 package Unit1;
-
 import java.util.Scanner;
 
 /**
@@ -39,15 +38,35 @@ public class SimpleIOMath {
      * Prompt user.
      */
     public void promptUser() {
+
         Scanner scan = new Scanner(System.in);
         System.out.println("* sit yourself down, take a seat *");
         System.out.println("* All you gotta do is repeat after me *");
         System.out.println("What is your name?");
         name = scan.nextLine();
         System.out.println("How old are you?");
-        age = Integer.parseInt(scan.nextLine());
+        boolean run = true;
+        while(run) {
+            try {
+                age = Integer.parseInt(scan.nextLine());
+                run = false;
+            } catch (NumberFormatException e) {
+                System.out.println(e.getMessage());
+                System.out.println("please enter a valid age");
+            }
+        }
+
         System.out.println("What is your favorite number?");
-        fnumber = Integer.parseInt(scan.nextLine());
+        run = true;
+        while(run) {
+            try {
+                fnumber = Integer.parseInt(scan.nextLine());
+                run = false;
+            } catch (NumberFormatException e) {
+                System.out.println(e.getMessage());
+                System.out.println("please enter a valid number");
+            }
+        }
     }
 
     /**
@@ -62,10 +81,22 @@ public class SimpleIOMath {
         System.out.println("your name is: " + name);
         System.out.println("your age is: " + age);
         int nextbirthday = age + 1;
+        MathFunctions mathFunctions = new MathFunctions();
         System.out.println("at your next birthday, you will turn: " + nextbirthday);
         System.out.println("The first prime factor of " + age + " is: ");
-            for(int i = 2; i < age; i++) {
-
+        if(MathFunctions.isPrime(age)){
+           System.out.print(1);
+        }else{
+            for (int i = 2; i <age; i++) {
+                if(MathFunctions.isPrime(i)){
+                    if(age % i == 0){
+                        System.out.print(i);
+                        break;
+                    }
+                }
             }
+        }
+        System.out.println("Your favorite number is: " +fnumber);
+        System.out.println("Your favorite number squared is:" +fnumber*fnumber);
     }
 }
