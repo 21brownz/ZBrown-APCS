@@ -6,26 +6,28 @@ package Unit1;
 import java.util.Scanner;
 
 /**
- * Sings School Days
+ * SimpleIOMath sings the song School Days plus some math about the user's age and favorite number.
+ * @author 21brownz
+ * @version 9/11/19
  */
 public class SimpleIOMath {
     /**
-     * The user's name
+     * The user's name.
      */
     String name;
     /**
-     * The user's age
+     * The user's age.
      */
     int age;
     /**
-     * The user's favorite number
+     * The user's favorite number.
      */
     int fnumber;
 
     /**
-     * The entry point of application.
+     * The entry point of SimpleIOMath
      *
-     * @param args the input arguments
+     * @param args the input arguments for the application
      */
     public static void main(String[] args) {
         SimpleIOMath simpleIOMath = new SimpleIOMath();
@@ -35,7 +37,7 @@ public class SimpleIOMath {
     }
 
     /**
-     * Prompt user.
+     * Prompt the user for their data.
      */
     public void promptUser() {
 
@@ -45,11 +47,11 @@ public class SimpleIOMath {
         System.out.println("What is your name?");
         name = scan.nextLine();
         System.out.println("How old are you?");
-        boolean run = true;
-        while(run) {
+        boolean tryinput = true;
+        while(tryinput) {
             try {
                 age = Integer.parseInt(scan.nextLine());
-                run = false;
+                tryinput = false;
             } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
                 System.out.println("please enter a valid age");
@@ -57,11 +59,11 @@ public class SimpleIOMath {
         }
 
         System.out.println("What is your favorite number?");
-        run = true;
-        while(run) {
+        tryinput = true;
+        while(tryinput) {
             try {
                 fnumber = Integer.parseInt(scan.nextLine());
-                run = false;
+                tryinput = false;
             } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
                 System.out.println("please enter a valid number");
@@ -70,7 +72,7 @@ public class SimpleIOMath {
     }
 
     /**
-     * Print user's info
+     * Print the user's info plus some arithmetic.
      */
     public void printInfo() {
         System.out.println("I'm gonna teach you how to sing it out");
@@ -83,20 +85,19 @@ public class SimpleIOMath {
         int nextbirthday = age + 1;
         MathFunctions mathFunctions = new MathFunctions();
         System.out.println("at your next birthday, you will turn: " + nextbirthday);
-        System.out.println("The first prime factor of " + age + " is: ");
         if(MathFunctions.isPrime(age)){
-           System.out.print(1);
+            System.out.println(age + "is a prime number");
         }else{
-            for (int i = 2; i <age; i++) {
+            for (int i = 2; i <age; i++){
                 if(MathFunctions.isPrime(i)){
                     if(age % i == 0){
-                        System.out.print(i);
+                        System.out.println("The first prime factor of " + age + "is: " +i);
                         break;
                     }
                 }
             }
         }
         System.out.println("Your favorite number is: " +fnumber);
-        System.out.println("Your favorite number squared is:" +fnumber*fnumber);
+        System.out.println("Your favorite number squared is " +fnumber*fnumber);
     }
 }

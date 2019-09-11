@@ -2,21 +2,17 @@ package Unit1;
 import org.jetbrains.annotations.Contract;
 
 /**
- * based off of ideas written by prime67. credit where credit is due...
- * Java Program to check if a number is Prime or Not. This program accepts a
- * number from command prompt and check if it is prime or not.
+ * A class of different math functions that are useful.
  * @author 21brownz
- *
+ * @version 1.0
  */
+
 public class MathFunctions {
 
-    public static void main(String[] args) {
-
-    }
-
-    /*
-     * Java method to check if an integer number is prime or not.
-     * @return true if number is prime, else false
+    /**
+     * Figures out if the number is prime and returns true/false
+     * @param number the number to process
+     * @return the boolean answer
      */
     @Contract(pure = true)
     public static boolean isPrime(int number) {
@@ -30,6 +26,14 @@ public class MathFunctions {
         return true;
     }
 
+    /**
+     * Determine the prime factors of a number. 21brownz's favorite way to find primes.
+     * @param number the input number to find the prime factor of
+     * @param prime  the n'th prime factor to find
+     * @return the value of the n'th prime factor
+     */
+
+    // TODO: 9/11/19 fix this guy
     public static int primeFactor(int number, int prime) {
         int[] primes = new int[number];
         int primeindex = 0;
@@ -42,6 +46,13 @@ public class MathFunctions {
         }
         return primes[prime];
     }
+
+    /**
+     * second way to determine if a number is prime or not, a little more cpu heavy but works with bigger numbers
+     *
+     * @param number number to process
+     * @return the boolean answer
+     */
 
     @Contract(pure = true)
     public static boolean isPrimeNumber(int number) {
@@ -58,23 +69,5 @@ public class MathFunctions {
             }
         }
         return true;
-    }
-
-
-    /*
-     * Third way to check if a number is prime or not.
-     */
-    public static boolean isPrimeOrNot(int num) {
-        if (Math.abs(num) == 0 || Math.abs(num) == 1) {
-            return false;
-        }
-        if (num == 2 || num == 3) {
-            return true;
-        }
-        if ((num * num - 1) % 24 == 0) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }
