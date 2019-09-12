@@ -27,7 +27,7 @@ public class SimpleIOMath {
     /**
      * The entry point of SimpleIOMath
      *
-     * @param args the input arguments for the application
+     * @param args the command line arguments for the application
      */
     public static void main(String[] args) {
         SimpleIOMath simpleIOMath = new SimpleIOMath();
