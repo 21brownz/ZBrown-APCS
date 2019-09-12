@@ -86,12 +86,12 @@ public class SimpleIOMath {
         MathFunctions mathFunctions = new MathFunctions();
         System.out.println("at your next birthday, you will turn: " + nextbirthday);
         if(MathFunctions.isPrime(age)){
-            System.out.println(age + "is a prime number");
+            System.out.println(age + " is a prime number");
         }else{
             for (int i = 2; i <age; i++){
                 if(MathFunctions.isPrime(i)){
                     if(age % i == 0){
-                        System.out.println("The first prime factor of " + age + "is: " +i);
+                        System.out.println("The first prime factor of " + age + " is: " +i);
                         break;
                     }
                 }
