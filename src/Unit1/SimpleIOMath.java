@@ -75,6 +75,7 @@ public class SimpleIOMath {
      * Print the user's info plus some arithmetic.
      */
     public void printInfo() {
+        MathFunctions mathFunctions = new MathFunctions();
         System.out.println("I'm gonna teach you how to sing it out");
         System.out.println("Come on, come on, come on");
         System.out.println("Let me tell you what it's all about");
@@ -83,7 +84,6 @@ public class SimpleIOMath {
         System.out.println("your name is: " + name);
         System.out.println("your age is: " + age);
         int nextbirthday = age + 1;
-        MathFunctions mathFunctions = new MathFunctions();
         System.out.println("at your next birthday, you will turn: " + nextbirthday);
         if(MathFunctions.isPrime(age)){
             System.out.println(age + " is a prime number");
