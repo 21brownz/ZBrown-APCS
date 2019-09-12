@@ -44,25 +44,25 @@ public class SimpleIOMath {
         Scanner scan = new Scanner(System.in);
         System.out.println("* sit yourself down, take a seat *");
         System.out.println("* All you gotta do is repeat after me *");
-        System.out.println("What is your name?");
-        name = scan.nextLine();
-        System.out.println("How old are you?");
+        System.out.print("What is your name? ");
+        name = scan.next();
+        System.out.print("How old are you? ");
         boolean tryinput = true;
         while(tryinput) {
             try {
-                age = Integer.parseInt(scan.nextLine());
+                age = Integer.parseInt(scan.next());
                 tryinput = false;
             } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
-                System.out.println("please enter a valid age");
+                System.out.println("please enter a valid age ");
             }
         }
 
-        System.out.println("What is your favorite number?");
+        System.out.print("What is your favorite number? ");
         tryinput = true;
         while(tryinput) {
             try {
-                fnumber = Integer.parseInt(scan.nextLine());
+                fnumber = Integer.parseInt(scan.next());
                 tryinput = false;
             } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
