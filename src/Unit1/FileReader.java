@@ -1,7 +1,9 @@
 package Unit1;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URL;
+
 import java.util.Scanner;
 
 /**
@@ -18,9 +20,19 @@ public class FileReader {
      * @return the initialized file
      */
     public File loadfile(String file){
-        URL url = RomanToDecimal.class.getResource(file); // finds the full path of the file being loaded from the name/ relative path
-        Scanner scanner = null; //initialized here so the code using the file can be run outside the try/catch statement
+        URL url = FileReader.class.getResource(file); // finds the full path of the file being loaded from the name/ relative path
         return new File(url.getPath()); // initialize the file object
     }
 
+    public String fileString(String file){
+        String contents;
+        URL url = FileReader.class.getResource(file);
+        File filevar = new File(url.getPath());
+        try {
+            return new Scanner(filevar).useDelimiter("\r").next();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
