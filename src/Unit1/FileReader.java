@@ -2,6 +2,7 @@ package Unit1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 
 import java.util.Scanner;
@@ -24,10 +25,10 @@ public class FileReader {
         return new File(url.getPath()); // initialize the file object
     }
 
-    public String fileString(String file){
+    public String fileString(String file) {
         String contents;
         URL url = FileReader.class.getResource(file);
-        File filevar = new File(url.getPath());
+        File filevar = loadfile(file);
         try {
             return new Scanner(filevar).useDelimiter("\r").next();
         } catch (FileNotFoundException e) {
@@ -35,4 +36,16 @@ public class FileReader {
             return null;
         }
     }
+        public String[] arrayString(String file) {
+            String contents;
+            URL url = FileReader.class.getResource(file);
+            File filevar = loadfile(file);
+            try{
+                String s = new Scanner(filevar).useDelimiter("\r").next();
+                return s.split("\\W+");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return new String[0];
+        }
 }

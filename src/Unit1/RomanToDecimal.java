@@ -4,10 +4,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class RomanToDecimal {
-    private String[] chars = {"I", "V", "X", "L", "C", "D", "M"};
-    private int[] values = {1, 5, 10, 50, 100, 500, 1000};
+    private static String[] chars = {"I", "V", "X", "L", "C", "D", "M"};
+    private static int[] values = {1, 5, 10, 50, 100, 500, 1000};
 
-        private int value(String roman){
+        private static int value(String roman){
             for (int i = 0; i < chars.length; i++) {
                 if (roman.equals(chars[i])){
                     return values[i];
@@ -15,18 +15,35 @@ public class RomanToDecimal {
             }
     return 0;
     }
-    public static void main(String[] args){
-        FileReader file = new FileReader();
-        Scanner scanner = null; //initialize the scanner outside the try/catch statement so you don't oof yourself trying to write a shit ton of code in one statement.
-        try{
-            scanner = new Scanner(file.loadfile("rtd_tests.txt"));
-        }catch(FileNotFoundException e){
-            e.printStackTrace();
+
+public static int romanToDecimal(String roman){
+    int sum = 0;
+    int v = 0;
+    for(int i = 0; i < roman.length(); i++) {
+        String letter = roman.substring(i, i+1);
+        v += value(letter);
+        if(v == 0)
+            return -1;
+        else
+            sum += v;
+    }
+if(roman.contains("IV"))
+        sum -= 2;
+else
+    return sum;
+
+return 0;
         }
-        //check to make sure the scanner isn't null so you don't throw a null pointer and off yourself.
-        if(scanner != null){
-            int numeralcount = 1;
-            while(scanner.hasNextLine()) numeralcount++;
+
+    /*public static void main(String[] args) {
+        String num1 = "XIV";
+        String num2 = "XXX_benbrowner_XXX";
+            System.out.println(num1 + " ==> " + romanToDecimal(num1.toUpperCase()));
+            System.out.println(num2 + " ==> " + romanToDecimal(num2.toUpperCase()));
+    }*/
+
+    public static void main(String[] args){
+     FileReader fileReader = new FileReader();
+        System.out.println(fileReader.fileString("rtd_tests.txt"));
         }
     }
-}
