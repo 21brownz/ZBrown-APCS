@@ -20,6 +20,7 @@ public class FileReader {
      * @param file the string containing the path of the file
      * @return the initialized file
      */
+
     public File loadfile(String file){
         URL url = FileReader.class.getResource(file); // finds the full path of the file being loaded from the name/ relative path
         return new File(url.getPath()); // initialize the file object
