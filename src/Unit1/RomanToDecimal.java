@@ -28,7 +28,7 @@ public class RomanToDecimal {
      * @param roman the roman numeral input
      * @return the integer output
      */
-    //TODO: add ability to count the number of pairs in a given roman numeral. just look it up on stackexchange.
+    //TODO: add ability to count the number of pairs in a given roman numeral. just look it up on StackExchange.
     public static int romanToDecimal(@NotNull String roman) {
     int sum = 0;
     int v = 0;
