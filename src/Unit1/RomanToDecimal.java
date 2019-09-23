@@ -4,7 +4,10 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * The type Roman to decimal.
+ * A Class for converting roman numerals to an integer.
+ * Full accuracy and error checking is not implemented
+ * @author 21brownz
+ * @version 1.4.2
  */
 public class RomanToDecimal {
     private static String[] chars = {"I", "V", "X", "L", "C", "D", "M"};
