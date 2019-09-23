@@ -35,7 +35,7 @@ public class RomanToDecimal {
         if (v == 0)
             return -1;
         else
-            sum += v;
+            sum = v;
     }
     if (roman.contains("IV") || roman.contains("IX")) {
         sum -= 2;
@@ -44,7 +44,7 @@ public class RomanToDecimal {
         sum -= 20;
     }
     if (roman.contains("CD") || roman.contains("CM")) {
-        sum -= 20;
+        sum -= 200;
     }
     return sum;
 }

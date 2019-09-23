@@ -14,7 +14,10 @@ import java.util.Scanner;
  * @version 1.0.1
  */
 
-public class FileReader {
+public class FileLoader {
+
+    public FileLoader(String file) {
+    }
 
     /**
      * Loads a given file from its real or relative path
@@ -23,13 +26,13 @@ public class FileReader {
      */
 
     public File loadfile(String file){
-        URL url = FileReader.class.getResource(file); // finds the full path of the file being loaded from the name/ relative path
+        URL url = FileLoader.class.getResource(file); // finds the full path of the file being loaded from the name/ relative path
         return new File(url.getPath()); // initialize the file object
     }
 
     public String fileString(String file) {
         String contents;
-        URL url = FileReader.class.getResource(file);
+        URL url = FileLoader.class.getResource(file);
         File filevar = loadfile(file);
         try {
             return new Scanner(filevar).useDelimiter("\r").next();
@@ -40,7 +43,7 @@ public class FileReader {
     }
         public String[] arrayString(String file) {
             String contents;
-            URL url = FileReader.class.getResource(file);
+            URL url = FileLoader.class.getResource(file);
             File filevar = loadfile(file);
             try{
                 String s = new Scanner(filevar).useDelimiter("\r").next();
