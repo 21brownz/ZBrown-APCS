@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * A class that calculates a person's BMI
  * @author 21brownz
- * @version 1.0
+ * @version 1.1
  */
 public class BMICalculator {
 
@@ -33,9 +33,9 @@ public class BMICalculator {
     public static void main(String[] args) {
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter your height in feet and inches (Ex 6'1\"):");
+        System.out.print("Enter your height in feet and inches (Ex 6'1\"): ");
         String htStr = scan.nextLine();
-        System.out.println("enter your weight in pounds:");
+        System.out.print("enter your weight in pounds: ");
         String wtStr = scan.nextLine();
 
         int feet = Integer.parseInt(htStr.substring(0, htStr.indexOf("\'")));
