@@ -37,7 +37,6 @@ public class BMICalculator {
         String htStr = scan.nextLine();
         System.out.print("enter your weight in pounds: ");
         String wtStr = scan.nextLine();
-
         int feet = Integer.parseInt(htStr.substring(0, htStr.indexOf("\'")));
         int in = Integer.parseInt(htStr.substring(htStr.indexOf("\'")+1, htStr.indexOf("\"")));
         int weight = Integer.parseInt(wtStr);
