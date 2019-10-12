@@ -1,5 +1,4 @@
 package Unit1;
-import org.jetbrains.annotations.Contract;
 
 /**
  * A class of different math functions that are useful.
@@ -14,7 +13,7 @@ public class MathFunctions {
      * @param number the number to process
      * @return the boolean answer
      */
-    @Contract(pure = true)
+
     public static boolean isPrime(int number) {
         int sqrt = (int) Math.sqrt(number) + 1;
         for (int i = 2; i < sqrt; i++) {
@@ -54,7 +53,6 @@ public class MathFunctions {
      * @return the boolean answer
      */
 
-    @Contract(pure = true)
     public static boolean isPrimeNumber(int number) {
         if (number == 2 || number == 3) {
             return true;

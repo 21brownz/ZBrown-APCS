@@ -1,7 +1,5 @@
 package Unit1;
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * A Class for converting roman numerals to an integer.
@@ -13,7 +11,7 @@ public class RomanToDecimal {
     private static String[] chars = {"I", "V", "X", "L", "C", "D", "M"};
     private static int[] values = {1, 5, 10, 50, 100, 500, 1000};
 
-        @Contract(pure = true)
+
         private static int value(String roman){
             for (int i = 0; i < chars.length; i++) {
                 if (roman.equals(chars[i])){
@@ -29,7 +27,7 @@ public class RomanToDecimal {
      * @return the integer output
      */
     //TODO: add ability to count the number of pairs in a given roman numeral. just look it up on StackExchange.
-    public static int romanToDecimal(@NotNull String roman) {
+    public static int romanToDecimal(String roman) {
     int sum = 0;
     int v = 0;
     for (int i = 0; i < roman.length(); i++) {
@@ -56,7 +54,7 @@ public class RomanToDecimal {
      * Main method.
      * @param args the program arguments
      */
-    public static void main(@NotNull String[] args){
+    public static void main(String[] args){
         if (args.length == 0) {
             System.out.print("No Arguments!");
         } else {
