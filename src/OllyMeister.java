@@ -5,8 +5,7 @@ public class OllyMeister {
     }
 
     public String getOllyMeisterStatus() {
-        String status;
-        int max = 10;
+        int max = 11;
         int min = 1;
         int range = max - min + 1;
         int random = (int) (Math.random() * range) + min;
@@ -15,7 +14,7 @@ public class OllyMeister {
             return "Olly has been consumed by Garfield as he was mistaken for lasagna";
         }
         if (random == 2) {
-            return "olly has consumed too much protein shake and is too swole to walk";
+            return "olly has consumed too much shots";
         }
         if (random == 3) {
             return "olly was sent to Lanis's office and has been banished to the shadow realm";
@@ -40,6 +39,9 @@ public class OllyMeister {
         }
         if (random == 10) {
             return "olly had his college fund taken by Mr. Phu after challenging him";
+        }
+        if (random == 11){
+            return "olly ate soap";
         }
         return "olly just kinda dipped";
     }

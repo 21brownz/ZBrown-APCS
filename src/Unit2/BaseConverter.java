@@ -57,12 +57,9 @@ public class BaseConverter {
      * actually do the conversion eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
      */
     public void inputConvertPrintWrite() throws IOException {
-        Scanner scan;
-        PrintStream ps;
-            ps = new PrintStream("boolean_cochran.dat");
-            scan = new Scanner(new File("datafiles/values10.dat"));
+        PrintStream ps = new PrintStream("boolean_cochran.dat");
+        Scanner scan = new Scanner(new File("datafiles/values10.dat"));
             BaseConverter baseConverter = new BaseConverter();
-
             while (scan.hasNextLine()){
                 String[] l = scan.nextLine().split("\t");
 
