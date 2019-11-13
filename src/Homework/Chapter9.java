@@ -1,8 +1,14 @@
 package Homework;
 
+import java.util.Arrays;
+
 public class Chapter9 {
     public static void main(String[] args) {
-
+        String[] list = {"One", "Two", "Three"};
+        for (String s: list) {
+            s += "*";
+        }
+        System.out.println(Arrays.toString(list));
     }
     public int[] arraySwap(int[] input){
         if(input.length > 0){
@@ -69,5 +75,18 @@ public class Chapter9 {
         }
         return sums;
     }
-
+    public boolean isMedian(Double[] sample, double m){
+        Arrays.sort(sample);
+        double median;
+        median = sample.length % 2 == 0 ? ((double) sample[sample.length / 2] + (double) sample[sample.length / 2 - 1]) / 2 : (double) sample[sample.length / 2];
+        return m == median;
+    }
+    public char getRandomRPS(){
+        char[] rps = {'r','r','r','p','p','p','p','p','s','s','s','s','s','s'};
+        int max = 13;
+        int min = 0;
+        int range = max - min + 1;
+        int random = (int) (Math.random() * range) + min;
+        return rps[random];
+    }
 }
