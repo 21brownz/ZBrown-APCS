@@ -19,9 +19,9 @@ public class ISBNValidator {
 
 
     public ISBNValidator(){
-        validnums = new String[100];
-        invalidnums = new String[100];
-        delimiter = "-"; //sets delim for character between chunks of the ISBN
+        validnums = new String[1102];
+        invalidnums = new String[1102];
+        delimiter = "-"; //sets delim for char between chunks of the ISBN
     }
 
     /**
@@ -29,7 +29,7 @@ public class ISBNValidator {
      */
     public void importData() {
         try{
-            Scanner scan = new Scanner(new File("isbnfiles/booleancochran.dat"));
+            Scanner scan = new Scanner(new File("isbnfiles/isbn1.dat"));
             int i = 0;
             int j = 0;
             while (scan.hasNextLine()){
@@ -68,13 +68,37 @@ public class ISBNValidator {
     /**
      * output the user-picked ISBN list or quit the application
      */
-    public void runProgram(){
-        for (int i = 0; i <validnums.length; i++) {
-            System.out.println(validnums[i]);
-        }
-        System.out.println("end of valid numbers");
-        for (int i = 0; i <invalidnums.length; i++) {
-            System.out.println(invalidnums[i]);
+    public void runProgram() {
+        int selection = 0;
+        Scanner scan = new Scanner(System.in);
+        while (selection != 3) {
+            try {
+                System.out.println("All ISBN data has been imported and validated. Would you like to:");
+                System.out.println("\t 1) View all valid ISBN numbers");
+                System.out.println("\t 2) View all invalid ISBN numbers");
+                System.out.println("\t 3) Quit");
+                System.out.print("Your selection: ");
+
+                selection = scan.nextInt();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (selection == 1) {
+                for (int i = 0; i <validnums.length; i++) {
+                    if(validnums[i] != null){
+                        System.out.println(validnums[i]);
+                    }
+                }
+                selection = 0;
+                System.out.println();
+            } else if (selection == 2) {
+                for (int i = 0; i <invalidnums.length; i++) {
+                    if(invalidnums[i] != null){
+                        System.out.println(invalidnums[i]);
+                    }
+                }
+                System.out.println();
+            }
         }
     }
 
