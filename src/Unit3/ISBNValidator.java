@@ -59,8 +59,12 @@ public class ISBNValidator {
             isbn[i] = Integer.parseInt(String.valueOf(replace.charAt(i)));
         }
         int total = 0;
-        for (int value : isbn) {
-            total += value;
+        for (int i = 0; i <isbn.length; i++) {
+            if(i%2 == 1){
+                total += 3 * isbn[i];
+            }else{
+                total += isbn[i];
+            }
         }
         return total % 10 == 0;
     }
