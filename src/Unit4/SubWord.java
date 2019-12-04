@@ -51,6 +51,6 @@ public class SubWord implements Comparable<SubWord> {
      * @return This SubWord in root = sub1 + sub2 format
      */
     public String toString()	{
-        return rootWord + "=" + getSubWords();
+        return rootWord + " = " + getSubWords();
     }
 }

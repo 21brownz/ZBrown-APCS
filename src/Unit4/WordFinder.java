@@ -3,8 +3,8 @@ package Unit4;
 import java.util.ArrayList;
 
 /**
- * SubWordInterface is a simple interface that forces students
- * to implement and comply with public method specifications.
+ * SubWordInterface is a simple interface that forces implementation of
+ * proper public method usage.
  * @author 21brownz
  * @version 11-25-19
  */
