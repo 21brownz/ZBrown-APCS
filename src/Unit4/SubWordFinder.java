@@ -41,6 +41,7 @@ public class SubWordFinder implements WordFinder {
                 word = in.nextLine();
                 dictionary.get(alpha.indexOf(word.charAt(0))).add(word);
             }
+            in.close();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -59,7 +60,7 @@ public class SubWordFinder implements WordFinder {
                 for(int i = 2; i < word.length()-2; i++){
                     sub1 = word.substring(0,i);
                     sub2 = word.substring(i);
-                    if(inDictionary(sub1)&&inDictionary(sub2)){
+                    if(inDictionary(sub1) && inDictionary(sub2)){
                         subWords.add(new SubWord(word, sub1, sub2));
                     }
                 }
@@ -78,7 +79,7 @@ public class SubWordFinder implements WordFinder {
         ArrayList<String> current = dictionary.get(alpha.indexOf(word.charAt(0)));
         int middle, left = 0, right = current.size()-1;
         while (left <= right) {
-            middle = (left+right)/2;
+            middle = (left+right) /2;
             if (current.get(middle).compareTo(word) < 0) {
                 left = middle + 1;
             } else if (current.get(middle).compareTo(word) > 0) {

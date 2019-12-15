@@ -3,10 +3,8 @@ package Unit4;
  * SubWord object contains the root word and the two interior
  * words that can be contained within it.
  * Example:	rootWord is "baseball", sub words are "base" + "ball"
- * TODO: Override this @author statement
- * @author ???
- * TODO: Override this @version statement
- * @version 01/12/2015
+ * @author 21brownz
+ * @version 12/3/19
  */
 public class SubWord implements Comparable<SubWord> {
     private String rootWord;
