@@ -20,11 +20,11 @@ public class StringCoder {
 
     private StringPart findPart(String str) {
         int max = 0;
-        int start=0, len=0;
-        for (int i=0; i<masterString.length(); i++) {
+        int start = 0, len = 0;
+        for (int i = 0; i < masterString.length(); i++) {
             int j = 0;
             int savei = i;
-            while (savei<masterString.length() && j<str.length() && masterString.charAt(savei) == str.charAt(j)) {
+            while (savei < masterString.length() && j < str.length() && masterString.charAt(savei) == str.charAt(j)) {
                 savei++;
                 j++;
             }
