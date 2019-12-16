@@ -1,11 +1,18 @@
-package TestReview;
+package FreeResponse;
 
 import java.util.ArrayList;
 
+/**
+ * @author 21brownz
+ */
 public class StringCoder {
 
     private String masterString;
 
+    /**
+     * constructor
+     * @param master master string
+     */
     public StringCoder(String master) {
         masterString = master;
     }
@@ -13,7 +20,7 @@ public class StringCoder {
     public String decodeString(ArrayList<StringPart> parts) {
         StringBuilder ans = new StringBuilder();
         for (StringPart part : parts){
-            ans.append(masterString.substring(part.getStart(), part.getStart() + part.getLength()));
+            ans.append(masterString, part.getStart(), part.getStart() + part.getLength());
         }
         return ans.toString();
     }
@@ -29,7 +36,7 @@ public class StringCoder {
                 j++;
             }
             if (j > max) {
-                start = savei-j;
+                start = savei - j;
                 len = j;
                 max = j;
             }

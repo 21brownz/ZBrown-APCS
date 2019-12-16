@@ -54,7 +54,7 @@ public class TestThree {
      */
     public String[] notInVocab(String[] wordArray)	{
         String[] notFounds = new String[countNotInWordBank(wordArray)];
-
+        return notFounds;
     }
 
 

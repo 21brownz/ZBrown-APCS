@@ -1,4 +1,4 @@
-package TestReview;
+package FreeResponse;
 
 public class StringPart {
     private int start;
