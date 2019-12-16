@@ -18,6 +18,11 @@ public class ClimbingClub {
         climbList.add(ci);
     }
 
+    /**
+     * Second way to add a climb. adds alphabetically.
+     * @param peakName the name of the peak climbed
+     * @param climbTime the time it takes to climb the peak.
+     */
     public void addClimbB(String peakName, int climbTime) {
         int i = 0;
         while (i < climbList.size() && peakName.compareTo(climbList.get(i).getName()) > 0) {
@@ -26,7 +31,10 @@ public class ClimbingClub {
         climbList.add(i, new ClimbInfo(peakName, climbTime));
     }
 
-    /** @return the number of distinct names in the list of climbs */
+    /**
+     * gives the number of distinct peak names.
+     * @return the number of distinct names in the list of climbs
+     */
     public int distinctPeakNames() {
         if (climbList.size() == 0){
             return 0;
@@ -46,4 +54,9 @@ public class ClimbingClub {
         }
         return numNames;
     }
+    /*
+    True-False answers
+    1. False
+    2. False
+     */
 }
