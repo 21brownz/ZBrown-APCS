@@ -10,7 +10,7 @@ public class ClimbingClub {
     private List<ClimbInfo> climbList;
 
     /** Adds a new climb with a name peakName and time climbTime to the list of climbs.
-     * @param peakName the name of the mountain peak climbed
+     * @param peakName the name of the mountain peak climbed.
      * @param climbTime the number of minutes taken to complete the climb.
      */
     public void addClimb(String peakName, int climbTime) {
@@ -20,7 +20,7 @@ public class ClimbingClub {
 
     /**
      * Second way to add a climb. adds alphabetically.
-     * @param peakName the name of the peak climbed
+     * @param peakName the name of the peak climbed.
      * @param climbTime the time it takes to climb the peak.
      */
     public void addClimbB(String peakName, int climbTime) {
@@ -33,7 +33,7 @@ public class ClimbingClub {
 
     /**
      * gives the number of distinct peak names.
-     * @return the number of distinct names in the list of climbs
+     * @return the number of distinct names in the list of climbs.
      */
     public int distinctPeakNames() {
         if (climbList.size() == 0){
@@ -55,7 +55,7 @@ public class ClimbingClub {
         return numNames;
     }
     /*
-    True-False answers
+    True-False answers:
     1. False
     2. False
      */
