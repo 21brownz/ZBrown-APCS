@@ -6,13 +6,13 @@ import java.util.Collections;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class ScrabbleRackManager {
+public class ScrabbleRackManagerTrie {
     private ArrayList<String> tileRack;
     private ArrayList<String> database;
     /**
      * class constructor
      */
-    public ScrabbleRackManager(){
+    public ScrabbleRackManagerTrie(){
         tileRack = new ArrayList<>(); //the rack
         String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //the alphabet
         int[] frequencies = {9, 2, 2, 4, 12, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2, 1, 6, 4, 6, 4, 2, 2, 1, 2, 1}; //the frequency of each letter in the scrabble bag
@@ -119,20 +119,12 @@ public class ScrabbleRackManager {
     public void printMatches(){
         ArrayList<String> Playlist = getPlaylist();
         String word;
-        for (int i = 0; i <Playlist.size(); i++) {
-            word = Playlist.get(i);
-            String x = word.length() == 7 ? word + "*" : word;
-            if (i % 10 == 9) {
-                System.out.println(x);
-            } else {
-                System.out.printf("%-10s", x);
-            }
-        }
+        ScrabbleRackManagerPermutations.printerHelper(Playlist);
     }
 
     /** main method for the class; use only 3 command lines in main */
     public static void main(String[] args){
-        ScrabbleRackManager app = new ScrabbleRackManager();
+        ScrabbleRackManagerTrie app = new ScrabbleRackManagerTrie();
         app.printRack();
         app.printMatches();
     }
