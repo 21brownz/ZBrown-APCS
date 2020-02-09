@@ -1,0 +1,16 @@
+package Unit5.CoinSorter;
+
+/**
+ * A class of Coin defining a Dime
+ */
+public class Dime extends Coin {
+    @Override
+    public double getValue() {
+        return 0.1;
+    }
+
+    @Override
+    public String getName() {
+        return "dime";
+    }
+}
