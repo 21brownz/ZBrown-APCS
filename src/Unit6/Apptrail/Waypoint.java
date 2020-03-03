@@ -17,6 +17,11 @@ public class Waypoint {
         this.elevation = elevation;
     }
 
+    public String toString(){
+        return "Type: " + type + ", Name: " + name + ", State: " + state + ", Latitude: " + latitude
+        + ", Longitude: " + longitude + ", Distance to Springer: " + distanceToSpringer + ", Distance to Katahdin: " + distancetoKatahdin + ", Elevation: " + elevation;
+    }
+
     public String getType() {
         return type;
     }
