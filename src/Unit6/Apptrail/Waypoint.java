@@ -18,8 +18,7 @@ public class Waypoint {
     }
 
     public String toString(){
-        return "Type: " + type + ", Name: " + name + ", State: " + state + ", Latitude: " + latitude
-        + ", Longitude: " + longitude + ", Distance to Springer: " + distanceToSpringer + ", Distance to Katahdin: " + distancetoKatahdin + ", Elevation: " + elevation;
+        return "Type: " + type + ", Name: " + name + ", State: " + state + ", Latitude: " + latitude + ", Longitude: " + longitude + ", Distance to Springer: " + distanceToSpringer + ", Distance to Katahdin: " + distancetoKatahdin + ", Elevation: " + elevation;
     }
 
     public String getType() {
