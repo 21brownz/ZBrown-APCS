@@ -134,7 +134,7 @@ public class TrailDatabase {
             System.out.println("\tEL: by elevation");
             System.out.print("Enter your preferred sort by term or 'Q' to quit: ");
             String term = in.nextLine();
-            if (term.equals("q")) {
+            if (term.equalsIgnoreCase("q")) {
                 break;
             }
             int sortField = app.getSearchTerms(term.toUpperCase());
