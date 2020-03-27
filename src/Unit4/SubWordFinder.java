@@ -1,6 +1,6 @@
 package Unit4;
 
-import org.jetbrains.annotations.Contract;
+//import org.jetbrains.annotations.Contract;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class SubWordFinder implements WordFinder {
     /**
      * Instantiates a new Sub-word finder.
      */
-    @Contract(pure = true)
+    //@Contract(pure = true)
     public SubWordFinder() {
         alpha = "abcdefghijklmnopqrstuvwxyz";
         dictionary = new ArrayList<>(26);
