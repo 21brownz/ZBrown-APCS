@@ -29,5 +29,6 @@ public abstract class Animal {
     public String getColor() {
         return color;
     }
+
     public abstract String speak();
 }
